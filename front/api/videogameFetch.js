@@ -1,3 +1,7 @@
+const apiUrl = process.env.API_URL;
+
+// "start": "node src/index.js"
+
 export const getAllVideogames = async () => {
   try {
     const response = await fetch("http://localhost:3001/videogames");
