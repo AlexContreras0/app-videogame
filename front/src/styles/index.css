@@ -1,0 +1,159 @@
+.container {
+  font-family: "Titillium Web", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  margin: 2rem auto;
+  max-width: 1550px;
+}
+
+.videogameListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+/*Menu*/
+
+.NavBar {
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menuMobile {
+  display: none;
+}
+
+/*New game button*/
+
+.link-confirm:active,
+.toggleButton {
+  box-shadow: 0px 0px var(--border-color);
+  transform: translate(3px, 3px);
+}
+
+.link-confirm,
+.toggleButton {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--border-color);
+  background-color: var(--white);
+  box-shadow: 4px 4px var(--border-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toggleButton {
+  display: none;
+  width: 100px;
+}
+
+/* Search Bar */
+
+.input-group {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid var(--border-color);
+  background-color: var(--white);
+  box-shadow: 4px 4px var(--border-color);
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-label {
+  position: absolute;
+  left: 15px;
+  color: var(--font-color);
+  opacity: 0.8;
+  pointer-events: none;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus {
+  border: 2px solid var(--focus);
+  box-shadow: 4px 4px var(--focus);
+}
+
+.input:focus ~ label {
+  transform: translateY(-100%) scale(0.8);
+  background-color: white;
+  opacity: 1;
+  padding: 0 0.2em;
+  color: var(--font-color);
+}
+
+.refresh-button {
+  position: absolute;
+  left: 12rem;
+
+  background: none;
+  outline: none;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refresh-button-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: #ff204e;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
+  .videogameListContainer {
+    justify-content: center;
+  }
+
+  .NavBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .toggleButton {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menuMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

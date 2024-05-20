@@ -1,0 +1,115 @@
+.flip-card {
+  font-family: "Titillium Web", sans-serif;
+
+  background-color: transparent;
+  width: 350px;
+  height: 550px;
+  perspective: 1000px;
+}
+
+.title {
+  color: var(--border-color);
+  font-weight: 900;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.platform {
+  margin-top: 0;
+  color: var(--border-color);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+.flip-card-back {
+  background: lightgrey;
+  color: white;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+}
+
+.secondaryInfo,
+.secondaryInfoComment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  margin: 10px auto;
+  width: 60%;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--border-color);
+  background-color: var(--white);
+  box-shadow: 4px 4px var(--border-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.secondaryInfoComment {
+  height: auto;
+  resize: vertical;
+  flex-direction: column;
+
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.secondaryInfo span,
+.secondaryInfoComment span {
+  font-weight: normal;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px auto 0 auto;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--border-color);
+  background-color: var(--white);
+  box-shadow: 4px 4px var(--border-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.link:active {
+  box-shadow: 0px 0px var(--border-color);
+  transform: translate(3px, 3px);
+}
