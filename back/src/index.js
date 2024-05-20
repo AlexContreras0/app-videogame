@@ -14,10 +14,7 @@ app.use(cors());
 
 app.use("/videogames", videogamesRouter);
 
-const url_mongo =
-  "mongodb+srv://alexcontrerasg98:a91PkD122AM2nUb2@app-videojuegos.g07vsyt.mongodb.net/?retryWrites=true&w=majority&appName=app-videojuegos";
-
-mongoose.connect(url_mongo);
+mongoose.connect(process.env.MONGO_URL);
 const db = mongoose.connection;
 
 db.on("error", (error) => {
