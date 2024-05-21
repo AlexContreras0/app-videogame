@@ -2,10 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const videogamesRouter = require("./routes/videogamesRoute");
+const videogamesRouter = require("../src/routes/videogamesRoute");
 
 const app = express();
-
 const PORT = 3001;
 
 dotenv.config();
