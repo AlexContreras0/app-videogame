@@ -1,0 +1,83 @@
+.platformButton {
+  text-decoration: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 1px auto 0 auto;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--border-color);
+  background-color: var(--white);
+  box-shadow: 4px 4px var(--border-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  fill: var(--border-color);
+  box-sizing: content-box;
+}
+
+.css-qbdosj-Input {
+  grid-template-columns: 1fr 1fr;
+}
+
+#react-select-7-live-region {
+  display: none;
+}
+
+.css-1f43avz-a11yText-A11yText {
+  display: none;
+}
+
+.css-13cymwt-control {
+  border: none;
+  border-color: transparent;
+  border-radius: 5px;
+  background-color: var(--white);
+  box-shadow: 4px 4px var(--border-color);
+  cursor: pointer;
+  outline: none;
+}
+
+.css-18xndy1-control {
+  border: none;
+  border-color: transparent;
+  border-radius: 5px;
+  background-color: var(--white);
+  box-shadow: 4px 4px var(--border-color);
+  cursor: pointer;
+  outline: none;
+}
+
+.css-18xndy1-control:focus {
+  border: none;
+  border-color: transparent;
+  border-radius: 5px;
+  background-color: var(--white);
+  box-shadow: 4px 4px var(--border-color);
+  cursor: pointer;
+  outline: none;
+}
+
+.css-13cymwt-control:focus {
+  border: none;
+  outline: none;
+}
+
+.css-1fdsijx-ValueContainer {
+  padding: 0 10px;
+}
+
+.css-1dimb5e-singleValue {
+  color: var(--font-color);
+}
+
+.css-1nmdiq5-menu {
+  border-radius: 5px;
+  background-color: var(--white);
+  box-shadow: 4px 4px var(--border-color);
+}

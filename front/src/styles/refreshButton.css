@@ -1,0 +1,23 @@
+.refreshButton {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--border-color);
+  background-color: var(--white);
+  box-shadow: 4px 4px var(--border-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refreshButton:active {
+  box-shadow: 0px 0px var(--border-color);
+  transform: translate(3px, 3px);
+}

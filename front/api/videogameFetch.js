@@ -1,10 +1,8 @@
 const apiUrl = process.env.API_URL;
 
-// "start": "node src/index.js"
-
 export const getAllVideogames = async () => {
   try {
-    const response = await fetch("http://localhost:3001/videogames");
+    const response = await fetch(`${apiUrl}videogames`);
     const videogames = await response.json();
     return videogames;
   } catch (error) {
@@ -15,7 +13,7 @@ export const getAllVideogames = async () => {
 
 export const getVideogameById = async (id) => {
   try {
-    const response = await fetch("http://localhost:3001/videogames/" + id);
+    const response = await fetch(`${apiUrl}videogames/${id}`);
     const videogame = await response.json();
     return videogame;
   } catch (error) {
@@ -26,7 +24,7 @@ export const getVideogameById = async (id) => {
 
 export const createVideogame = async (bodyParam) => {
   try {
-    const response = await fetch("http://localhost:3001/videogames/", {
+    const response = await fetch(`${apiUrl}videogames/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(bodyParam),
@@ -41,7 +39,7 @@ export const createVideogame = async (bodyParam) => {
 
 export const deleteVideogame = async (id) => {
   try {
-    const response = await fetch(`http://localhost:3001/videogames/${id}`, {
+    const response = await fetch(`${apiUrl}videogames/${id}`, {
       method: "DELETE",
     });
     const data = await response.json();
@@ -55,7 +53,7 @@ export const deleteVideogame = async (id) => {
 
 export const updateVideogame = async (id, bodyParam) => {
   try {
-    const response = await fetch(`http://localhost:3001/videogames/${id}`, {
+    const response = await fetch(`${apiUrl}videogames/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(bodyParam),
